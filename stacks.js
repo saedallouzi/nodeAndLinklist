@@ -15,7 +15,7 @@ class Node {
   
     push = (color, number) => {
       if (this.isFull) {
-        console.log(` you can't add ${number}`);
+        console.log(`you can't add ${number}`);
       } else {
         const newNode = new Node(color, number);
         newNode.nextNode = this.topNode;
@@ -26,7 +26,7 @@ class Node {
   
     pop = () => {
       if (this.isEmpty) {
-        return 'deck is empty';
+        return ('deck is empty');
       } else {
         const popped = this.topNode;
         this.topNode = popped.nextNode;
@@ -44,7 +44,7 @@ class Node {
     }
   
     get peek() {
-      if (this.isEmpty) console.log('Your deck is empty. Add cards!');
+      if (this.isEmpty) console.log('Add cards!');
       else return [this.topNode.number, this.topNode.color];
     }
   }
@@ -71,15 +71,13 @@ class Node {
     [5, 'green'],
     [5, 'yellow'],
   ];
-  let randomizedDeck = deck.sort((a, b) => {
-  0.5 - Math.random());
+  let randomizedDeck = deck.sort((a, b) => 0.5 - Math.random());
   let playerOne = [];
   let playerTwo = [];
-  const theDeck = new Stack(20)};
+  const theDeck = new Stack(20);
   
-  randomizedDeck.forEach((card) => {
-    theDeck.push(card[0], card[1]);
-  )};
+  randomizedDeck.forEach((card) => theDeck.push(card[0], card[1])
+  );
   let i = 0;
   while (i < 5) {
     playerOne.push(theDeck.pop());
